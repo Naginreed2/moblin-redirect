@@ -12,7 +12,7 @@ export default function Links() {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
     >
-      <div>
+      <div className="flex flex-col gap-1">
         {links.map((link, index) => (
           <LinkButton key={link.id} link={link} index={index} />
         ))}

@@ -4,29 +4,26 @@ import { motion } from "framer-motion";
 import { LinkType } from "@/lib/data";
 import { ExternalLink } from "lucide-react";
 import * as Icons from "lucide-react";
-import { FC } from "react";
+import type { LucideIcon } from "lucide-react";
 
 type LinkButtonProps = {
   link: LinkType;
   index: number;
 };
 
-// Icon props accepted by Lucide icons
-type IconProps = {
-  size?: number;
-  className?: string;
-};
-
-// Type guard to check if a value is a valid icon component
-function isIconComponent(value: unknown): value is FC<IconProps> {
-  return typeof value === "function";
-}
-
 export default function LinkButton({ link, index }: LinkButtonProps) {
-  const fallbackIcon: FC<IconProps> = ExternalLink;
+  // Get icon component from name or fallback to ExternalLink
+  const getIcon = (iconName?: string): LucideIcon => {
+    if (!iconName) return ExternalLink;
 
-  const maybeIcon = link.icon && Icons[link.icon as keyof typeof Icons];
-  const IconComponent = isIconComponent(maybeIcon) ? maybeIcon : fallbackIcon;
+    const formattedName =
+      iconName.charAt(0).toUpperCase() + iconName.slice(1);
+
+    const icon = Icons[formattedName as keyof typeof Icons];
+    return (icon ?? ExternalLink) as LucideIcon;
+  };
+
+  const IconComponent = getIcon(link.icon);
 
   return (
     <motion.a
@@ -58,9 +55,7 @@ export default function LinkButton({ link, index }: LinkButtonProps) {
       </div>
 
       {link.description && (
-        <p className="text-sm text-muted-foreground mt-1">
-          {link.description}
-        </p>
+        <p className="text-sm text-muted-foreground mt-1">{link.description}</p>
       )}
 
       <motion.div

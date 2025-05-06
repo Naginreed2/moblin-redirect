@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Moblin Links',
   description: 'Mobile streaming companion links',
+  icons: {
+    icon: '/favicon.svg', // This line tells Next.js to use your SVG favicon
+  },
 };
 
 export default function RootLayout({
