@@ -19,6 +19,10 @@
 .DS_Store
 *.pem
 
+# local scripts and zips
+*.zip
+*.sh
+
 # debug
 npm-debug.log*
 yarn-debug.log*
