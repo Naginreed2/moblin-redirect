@@ -62,5 +62,12 @@ export const links: LinkType[] = [
     url: "https://moblin.mys-lang.org/obs-remote-control-relay/",
     description: "Relay for OBS2Moblin Remote Control",
     icon: "Video",
+  },
+  {
+    id: "moblin-analyzer-cfg",
+    title: "Moblin Analyzer - Config",
+    url: "https://cfg.moblin.top",
+    description: "a simple Config Analyzer",
+    icon: "Binoculars",
   }
 ];
