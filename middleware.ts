@@ -8,6 +8,7 @@ export function middleware(request: NextRequest) {
     app: 'https://apps.apple.com/app/id6466745933',
     discord: 'https://discord.gg/nt3UwHqbMM',
     dc: 'https://discord.gg/nt3UwHqbMM',
+    docs: 'https://docs.moblin.top/en',
     github: 'https://github.com/eerimoq/moblin',
     git: 'https://github.com/eerimoq/moblin',
     moblink: 'https://play.google.com/store/apps/details?id=com.eerimoq.moblink',
