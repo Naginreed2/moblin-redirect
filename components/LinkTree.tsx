@@ -1,3 +1,5 @@
+// components/LinkTree.tsx
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -13,27 +15,26 @@ export default function LinkTree() {
       const contentHeight = document.body.scrollHeight;
       setShowTitle(contentHeight <= windowHeight);
     };
-
     checkHeight();
-    window.addEventListener('resize', checkHeight);
-    return () => window.removeEventListener('resize', checkHeight);
+    window.addEventListener("resize", checkHeight);
+    return () => window.removeEventListener("resize", checkHeight);
   }, []);
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col items-center justify-center w-full max-w-xl mx-auto px-4 py-8 md:py-8"
+      className="min-h-screen flex flex-col items-center justify-start p-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       {showTitle && (
         <motion.h1
-          className="text-4xl font-bold mb-8 text-center"
+          className="text-4xl font-bold mb-8 text-center bg-black/50 inline-block px-4 py-3 rounded-lg"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Moblin Links
+          Moblin
         </motion.h1>
       )}
       <Links />
