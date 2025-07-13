@@ -6,6 +6,7 @@ export function middleware(request: NextRequest) {
 
   const redirects: Record<string, string> = {
     app: 'https://apps.apple.com/app/id6466745933',
+    cfg: 'https://irlhosting.com/moblin/',
     discord: 'https://discord.gg/nt3UwHqbMM',
     dc: 'https://discord.gg/nt3UwHqbMM',
     docs: 'https://docs.moblin.top/en',

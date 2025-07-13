@@ -71,7 +71,7 @@ export const links: LinkType[] = [
     id: "moblin-cfg-vwr",
     title: "Moblin Config Viewer",
     url: "https://irlhosting.com/moblin/",
-    description: "View all Settings in a nice way | irltools.com",
+    description: "View all Settings in a nice way | irlhosting.com",
     icon: "Binoculars",
     type: "tools",
   }
