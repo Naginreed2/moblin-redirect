@@ -30,7 +30,7 @@ export default function LinkButton({ link, index }: LinkButtonProps) {
       href={link.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative w-full p-4 flex flex-col justify-between rounded-xl bg-card hover:bg-green-900 border border-border hover:border-gray-300 transition-all duration-300 overflow-hidden group"
+      className="relative w-full p-3 flex flex-col justify-between rounded-xl bg-card hover:bg-green-900 border border-border hover:border-gray-300 transition-all duration-300 overflow-hidden group"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.1 * index, duration: 0.4 }}

@@ -1,5 +1,3 @@
-// app/layout.tsx
-
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -11,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Moblin Links',
   description: 'Mobile streaming companion links',
   icons: {
-    icon: '/favicon.svg', // This line tells Next.js to use your SVG favicon
+    icon: '/favicon.svg',
   },
 };
 
@@ -22,12 +20,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* make the body a relative container so our fixed logos cover the viewport */}
       <body className={`${inter.className} relative min-h-screen`}>
-        {/* sprinkle your faded logos behind everything */}
         <BackgroundLogos />
 
-        {/* main content above logos */}
+        {/* Centered large logo and title with tight spacing */}
+        <div className="w-full flex justify-center mt-4 z-20 relative pointer-events-none select-none">
+          <div className="flex items-center gap-3">
+            <img
+              src="/favicon.svg"
+              alt="Moblin Logo"
+              className="w-16 h-16 shrink-0"
+              style={{ minWidth: '3rem', minHeight: '3rem' }}
+            />
+            <h1 className="text-2xl font-bold whitespace-nowrap">Moblin</h1>
+          </div>
+        </div>
+
+        {/* Main content */}
         <div className="relative z-10">
           {children}
         </div>

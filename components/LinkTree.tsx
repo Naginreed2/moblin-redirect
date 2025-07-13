@@ -22,14 +22,14 @@ export default function LinkTree() {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col items-center justify-start p-6"
+      className="min-h-screen flex flex-col items-center justify-start p-1"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       {showTitle && (
         <motion.h1
-          className="text-4xl font-bold mb-8 text-center bg-black/50 inline-block px-4 py-3 rounded-lg"
+          className="text-4xl font-bold mb-4 text-center bg-black/50 inline-block px-4 py-3 rounded-lg"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
