@@ -7,13 +7,13 @@ export function middleware(request: NextRequest) {
   const redirects: Record<string, string> = {
     app: 'https://apps.apple.com/app/id6466745933',
     cfg: 'https://irlhosting.com/moblin/',
-    discord: 'https://discord.gg/nt3UwHqbMM',
-    dc: 'https://discord.gg/nt3UwHqbMM',
+    discord: 'https://discord.gg/kh3KMng4JV',
+    dc: 'https://discord.gg/kh3KMng4JV',
     docs: 'https://docs.moblin.top/en',
     github: 'https://github.com/eerimoq/moblin',
     git: 'https://github.com/eerimoq/moblin',
     moblink: 'https://play.google.com/store/apps/details?id=com.eerimoq.moblink',
-    assistant: 'https://moblin.mys-lang.org/moblin-remote-control-relay/assistant.html',
+    assistant: 'https://moblinremote.com/',
     remote: 'https://moblin.mys-lang.org/moblin-remote-control-relay/',
     obs: 'https://moblin.mys-lang.org/obs-remote-control-relay/',
   };

@@ -47,7 +47,7 @@ export const links: LinkType[] = [
     id: "moblin-assistant",
     title: "Assistant",
     url: "https://assistant.moblin.top",
-    description: "Check Moblin Status remotely",
+    description: "Control Moblin remotely | irlhosting.com",
     icon: "CircleUserRound",
     type: "remote",
   },
